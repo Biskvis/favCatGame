@@ -45,7 +45,7 @@ function App() {
   const display = cat.map((item, index) => (
     <div key={index} className=''>
       <img
-        className='h-auto max-w-full rounded-lg cursor-pointer hover:scale-110'
+        className='h-auto max-w-full w-96 rounded-lg cursor-pointer hover:scale-110'
         onClick={() => saveCat(item.url)}
         src={item.url}
       />
