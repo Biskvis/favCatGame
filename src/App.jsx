@@ -58,15 +58,15 @@ function App() {
 
   return (
     <>
-      {!full && <div className='p-8 gap-4 w-40 h-40 flex flex-row'>{favorites}</div>}
+      {!full && <div className='p-8 gap-4 h-40 flex flex-row overflow-auto'>{favorites}</div>}
       <h1 className='text-center text-cyan-600 font-bold text-4xl mt-20 p-8'>Cat App</h1>
       <div className='flex justify-center items-center flex-col '>
         {!full && !won ?
-          <div className='w-6/12 grid grid-cols-2 gap-2'>
+          <div className='md:w-6/12  grid grid-cols-2 gap-4'>
             {display}
           </div>
           : !won ?
-            <div className='w-9/12 grid grid-cols-4 gap-4'>
+            <div className='md:w-9/12 grid grid-cols-2 md:grid-cols-4 gap-4'>
               <h1 className='text-xl'>Pick your favorite cat</h1>
               {favorites}
             </div>
@@ -79,8 +79,8 @@ function App() {
         }
         {cat.length < 1 &&
           <div className=''>
-            <h1 className="text-2xl">Cat Picture Elimination Challenge</h1>
-            <ul className='p-2 text-xl'>
+            <h1 className="text-2xl p-4">Cat Picture Elimination Challenge</h1>
+            <ul className='p-4 text-xl'>
               <li>Click on your favorite cat in each round.</li>
               <li>Your chosen cat will be added to your favorites list.</li>
               <li>Once you've selected 10 cats, you'll enter the final round to pick your ultimate favorite.</li>
